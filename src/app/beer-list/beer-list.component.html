@@ -1,5 +1,5 @@
 <ul class="keg-list">
-  <li class="keg" *ngFor="let keg of kegList">
+  <li class="keg" *ngFor="let keg of kegList | ibu">
     <div class="kegInfo">
       <p class="name">{{keg.name}}</p>
       <p class="brand">{{keg.brand}}</p>
