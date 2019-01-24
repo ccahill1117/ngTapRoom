@@ -5,6 +5,7 @@ export class Keg {
   pricePint: number = 0;
   alcoholContent: number = 0;
   ibu: number = 0;
+  pintsLeft: number = 124;
 
   constructor(public params) {
     this.name = params.name;

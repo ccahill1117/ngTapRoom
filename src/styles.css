@@ -14,8 +14,11 @@ body {
 }
 
 .keg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 200px;
-  height: 13em;
+  height: 15em;
   padding: 1em;
   border: 1px solid #808080;
   border-radius: 3px;
@@ -23,7 +26,11 @@ body {
   background-color: #f0d8c8;
 }
 
-.keg p {
+.pourButton {
+
+}
+
+.kegInfo p {
   margin: 0.5em 0.2em;
 }
 

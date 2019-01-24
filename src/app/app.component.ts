@@ -14,4 +14,9 @@ export class AppComponent {
     new Keg({name: "Drop Top Amber Ale", brand: "Widmer Brothers", price: 135, pricePint: 5, alcoholContent: 5.00, ibu: 20}),
     new Keg({name: "O'Doul's", brand: "Anheuser-Busch", price: 100, pricePint: 2, alcoholContent: 0.50, ibu: 5})
   ]
+
+  pourPint(keg: Keg) {
+    keg.pintsLeft -= 1;
+  }
+
 }

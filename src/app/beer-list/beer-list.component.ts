@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Keg } from '../models/keg.model'
 
 @Component({
@@ -9,5 +9,10 @@ import { Keg } from '../models/keg.model'
 
 export class BeerListComponent {
   @Input() kegList: Keg[];
+  @Output() pintEmitter = new EventEmitter();
+
+  pourPint(keg: Keg) {
+    this.pintEmitter.emit(keg);
+  }
 
 }

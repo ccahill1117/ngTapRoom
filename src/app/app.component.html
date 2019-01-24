@@ -1,1 +1,2 @@
-<app-beer-list [kegList]="kegs"></app-beer-list>
+
+<app-beer-list [kegList]="kegs" (pintEmitter)="pourPint($event)"></app-beer-list>

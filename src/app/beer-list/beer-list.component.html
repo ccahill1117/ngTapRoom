@@ -1,10 +1,16 @@
 <ul class="keg-list">
   <li class="keg" *ngFor="let keg of kegList">
-    <p class="name">{{keg.name}}</p>
-    <p class="brand">{{keg.brand}}</p>
-    <p class="price">Keg Price ${{keg.price}}</p>
-    <p class="pintPrice">Pint Price ${{keg.pintPrice}}</p>
-    <p class="alcoholContent">Alcohol {{keg.alcoholContent}}%</p>
-    <p class="ibu">IBU {{keg.ibu}}</p>
+    <div class="kegInfo">
+      <p class="name">{{keg.name}}</p>
+      <p class="brand">{{keg.brand}}</p>
+      <p class="price">Keg Price ${{keg.price}}</p>
+      <p class="pintPrice">Pint Price ${{keg.pintPrice}}</p>
+      <p class="alcoholContent">Alcohol {{keg.alcoholContent}}%</p>
+      <p class="ibu">IBU {{keg.ibu}}</p>
+      <p class="pintsLeft">Pints Remaining {{keg.pintsLeft}}</p>
+    </div>
+    <div>
+      <button class="pourButton" (click)="pourPint(keg)">Pour</button>
+    </div>
   </li>
 </ul>
