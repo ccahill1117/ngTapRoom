@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.keg-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.keg {
+  width: 200px;
+  height: 13em;
+  padding: 1em;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  margin: 0.2em;
+  background-color: #f0d8c8;
+}
+
+.keg p {
+  margin: 0.5em 0.2em;
+}
+
+.name {
+  font-size: 1.2em;
+}

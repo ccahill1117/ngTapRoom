@@ -8,7 +8,7 @@ export class Keg {
 
   constructor(public params) {
     this.name = params.name;
-    this.brand = params.name;
+    this.brand = params.brand;
     this.price = params.price;
     this.pricePint = params.pricePint;
     this.alcoholContent = params.alcoholContent;
