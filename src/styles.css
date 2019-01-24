@@ -6,34 +6,3 @@ html {
 body {
   font-size: 1.8rem;
 }
-
-.keg-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.keg {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 200px;
-  height: 15em;
-  padding: 1em;
-  border: 1px solid #808080;
-  border-radius: 3px;
-  margin: 0.2em;
-  background-color: #f0d8c8;
-}
-
-.pourButton {
-
-}
-
-.kegInfo p {
-  margin: 0.5em 0.2em;
-}
-
-.name {
-  font-size: 1.2em;
-}

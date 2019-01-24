@@ -10,9 +10,9 @@ export class Keg {
   constructor(public params) {
     this.name = params.name;
     this.brand = params.brand;
-    this.price = params.price;
-    this.pricePint = params.pricePint;
-    this.alcoholContent = params.alcoholContent;
-    this.ibu = params.ibu;
+    this.price = parseInt(params.price);
+    this.pricePint = parseInt(params.pricePint);
+    this.alcoholContent = parseInt(params.alcoholContent);
+    this.ibu = parseInt(params.ibu);
   }
 }

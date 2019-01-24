@@ -19,4 +19,8 @@ export class AppComponent {
     keg.pintsLeft -= 1;
   }
 
+  addKeg(keg: Keg) {
+    this.kegs.push(keg);
+  }
+
 }
