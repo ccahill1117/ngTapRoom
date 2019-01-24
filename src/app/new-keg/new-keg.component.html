@@ -1,0 +1,20 @@
+<div class="newKegBox">
+  <h2>Add New Keg</h2>
+  <div class="newKeg">
+    <label>Keg Name</label>
+    <input #newName>
+    <label>Keg Brand</label>
+    <input #newBrand>
+    <label>Keg Price</label>
+    <input #newPrice>
+    <label>Pint Price</label>
+    <input #newPintPrice>
+    <label>Keg Alcohol</label>
+    <input #newAlcohol>
+    <label>Keg IBU</label>
+    <input #newIbu>
+    <div>
+      <button (click)="newKeg(newName.value,newBrand.value,newPrice.value,newPintPrice.value,newAlcohol.value,newIbu.value); newName.value='';newBrand.value='';newPrice.value='';newPintPrice.value='';newAlcohol.value='';newIbu.value='';">Add A Keg</button>
+    </div>
+  </div>
+</div>
