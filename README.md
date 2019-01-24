@@ -40,3 +40,33 @@ export class ChildComponent {
 ```html
 <app-item-list [childItemList]="itemList"></app-item-list>
 ```
+
+### Adding child component output
+#### in child.component.ts...
+```javascript
+import { Component..., Output } from '@angular/core';
+...
+export class ChildComponent {
+  @Output() childEditItem = new EventEmitter();
+
+  editItem(item: Item) {
+    this.childEditItem.emit(item);
+  }
+}
+```
+#### in child.component.html
+```html
+<element (click)="editItem(item)">TEXT</element>
+```
+#### in parent.component.html
+```html
+<app-item-list (childEditItem)="editItem($event)"></app-item-list>
+```
+#### in parent.component.ts
+```javascript
+export class ParentComponent {
+  editItem(item) {
+    item.doSomething();
+  }
+}
+```
