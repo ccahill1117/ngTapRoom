@@ -1,5 +1,13 @@
+<select (change)="onComparisonChange($event.target.value)">
+  <option value="allBeers">All Beers</option>
+  <option value="lessThanIbu">Less Than IBU</option>
+  <option value="greaterThanIbu">Greater Than IBU</option>
+</select>
+<label>IBU Input</label>
+<input (change)="onIBUChange($event.target.value)" #ibuInput>
+
 <ul class="keg-list">
-  <li class="keg" *ngFor="let keg of kegList | ibu">
+  <li class="keg" *ngFor="let keg of kegList | ibu:filterIbu">
     <div class="kegInfo">
       <p class="name">{{keg.name}}</p>
       <p class="brand">{{keg.brand}}</p>

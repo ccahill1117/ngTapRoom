@@ -8,10 +8,10 @@ import { Keg } from './models/keg.model';
 })
 
 export class IbuPipe implements PipeTransform {
-  transform(input: Keg[]) {
+  transform(input: Keg[], ibu: number, comparison: string) {
     var output: Keg[] = [];
     for (var i=0; i < input.length; i++) {
-      if (input[i].ibu > 10) {
+      if (input[i].ibu > ibu) {
         output.push(input[i]);
       }
     }
