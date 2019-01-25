@@ -8,13 +8,29 @@ import { Keg } from './models/keg.model';
 })
 
 export class IbuPipe implements PipeTransform {
-  transform(input: Keg[], ibu: number, comparison: string) {
-    var output: Keg[] = [];
-    for (var i=0; i < input.length; i++) {
-      if (input[i].ibu > ibu) {
-        output.push(input[i]);
-      }
+  transform(input: Keg[], params) {
+    if (params[1] == "allBeers") {
+      return input;
     }
-    return output;
+    else if (params[1] == "lessThanIbu") {
+      var output: Keg[] = [];
+      for (var i=0; i < input.length; i++) {
+        if (input[i].ibu < params[0]) {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    }
+
+    else if (params[1] == "greaterThanIbu") {
+      var output: Keg[] = [];
+      for (var i=0; i < input.length; i++) {
+        if (input[i].ibu > params[0]) {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    }
+
   }
 }

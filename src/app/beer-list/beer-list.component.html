@@ -7,7 +7,7 @@
 <input (change)="onIBUChange($event.target.value)" #ibuInput>
 
 <ul class="keg-list">
-  <li class="keg" *ngFor="let keg of kegList | ibu:filterIbu">
+  <li class="keg" *ngFor="let keg of kegList | ibu:[filterIbu, filterComparison]">
     <div class="kegInfo">
       <p class="name">{{keg.name}}</p>
       <p class="brand">{{keg.brand}}</p>
